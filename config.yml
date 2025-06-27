@@ -1,10 +1,9 @@
 backend:
-  name: github
-  repo: biopesca/biopesca-shop
+  name: git-gateway
   branch: main
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "articoli"
@@ -19,11 +18,10 @@ collections:
 
   - name: "promo"
     label: "Promozioni"
-    folder: "promozioni"
+    folder: "promo"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Sconto", name: "sconto", widget: "string" }
-      - { label: "Data Fine", name: "data_fine", widget: "datetime" }
+      - { label: "Sconto", name: "discount", widget: "string" }
       - { label: "Descrizione", name: "body", widget: "markdown" }
