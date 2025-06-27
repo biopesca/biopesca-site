@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: biopesca/biopesca-shop
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "articoli"
+    label: "Articoli"
+    folder: "articoli"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "promo"
+    label: "Promozioni"
+    folder: "promozioni"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Sconto", name: "sconto", widget: "string" }
+      - { label: "Data Fine", name: "data_fine", widget: "datetime" }
+      - { label: "Descrizione", name: "body", widget: "markdown" }
